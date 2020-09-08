@@ -263,16 +263,17 @@ func (n *node) Update(data interface{}) error {
 			if ref.Type().Field(i).PkgPath != "" {
 				continue
 			}
-			zero := reflect.Zero(f.Type()).Interface()
-			actual := f.Interface()
-			if !reflect.DeepEqual(actual, zero) {
+			//Bug fixed by jason@zgwit.com, update field failed, if values: 0 "" false
+			//zero := reflect.Zero(f.Type()).Interface()
+			//actual := f.Interface()
+			//if !reflect.DeepEqual(actual, zero) {
 				cf := current.Field(i)
 				cf.Set(f)
 				idxInfo, ok := cfg.Fields[ref.Type().Field(i).Name]
 				if ok {
 					idxInfo.Value = &cf
 				}
-			}
+			//}
 		}
 		return nil
 	})
