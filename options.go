@@ -3,8 +3,8 @@ package storm
 import (
 	"os"
 
-	"github.com/zgwit/storm/codec"
-	"github.com/zgwit/storm/index"
+	"github.com/zgwit/storm/v3/codec"
+	"github.com/zgwit/storm/v3/index"
 	bolt "go.etcd.io/bbolt"
 )
 

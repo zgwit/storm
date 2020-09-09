@@ -3,7 +3,7 @@ package sereal
 import (
 	"testing"
 
-	"github.com/zgwit/storm/codec/internal"
+	"github.com/zgwit/storm/v3/codec/internal"
 	"github.com/stretchr/testify/require"
 )
 

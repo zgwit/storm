@@ -4,7 +4,7 @@ package protobuf
 import (
 	"errors"
 
-	"github.com/zgwit/storm/codec/json"
+	"github.com/zgwit/storm/v3/codec/json"
 	"github.com/golang/protobuf/proto"
 )
 

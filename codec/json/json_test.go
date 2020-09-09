@@ -3,7 +3,7 @@ package json
 import (
 	"testing"
 
-	"github.com/zgwit/storm/codec/internal"
+	"github.com/zgwit/storm/v3/codec/internal"
 )
 
 func TestJSON(t *testing.T) {

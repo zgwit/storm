@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/zgwit/storm/codec/internal"
-	"github.com/zgwit/storm/codec/json"
+	"github.com/zgwit/storm/v3/codec/internal"
+	"github.com/zgwit/storm/v3/codec/json"
 )
 
 var testKey, _ = base64.StdEncoding.DecodeString("xkBTXc1wn0C/aL31u9SA7g==")

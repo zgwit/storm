@@ -7,9 +7,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/zgwit/storm"
-	"github.com/zgwit/storm/codec/gob"
-	"github.com/zgwit/storm/index"
+	"github.com/zgwit/storm/v3"
+	"github.com/zgwit/storm/v3/codec/gob"
+	"github.com/zgwit/storm/v3/index"
 	bolt "go.etcd.io/bbolt"
 	"github.com/stretchr/testify/require"
 )

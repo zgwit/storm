@@ -3,12 +3,12 @@ package codec_test
 import (
 	"fmt"
 
-	"github.com/zgwit/storm"
-	"github.com/zgwit/storm/codec/gob"
-	"github.com/zgwit/storm/codec/json"
-	"github.com/zgwit/storm/codec/msgpack"
-	"github.com/zgwit/storm/codec/protobuf"
-	"github.com/zgwit/storm/codec/sereal"
+	"github.com/zgwit/storm/v3"
+	"github.com/zgwit/storm/v3/codec/gob"
+	"github.com/zgwit/storm/v3/codec/json"
+	"github.com/zgwit/storm/v3/codec/msgpack"
+	"github.com/zgwit/storm/v3/codec/protobuf"
+	"github.com/zgwit/storm/v3/codec/sereal"
 )
 
 func Example() {

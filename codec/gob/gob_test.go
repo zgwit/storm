@@ -3,7 +3,7 @@ package gob
 import (
 	"testing"
 
-	"github.com/zgwit/storm/codec/internal"
+	"github.com/zgwit/storm/v3/codec/internal"
 )
 
 func TestGob(t *testing.T) {

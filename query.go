@@ -1,8 +1,8 @@
 package storm
 
 import (
-	"github.com/zgwit/storm/internal"
-	"github.com/zgwit/storm/q"
+	"github.com/zgwit/storm/v3/internal"
+	"github.com/zgwit/storm/v3/q"
 	bolt "go.etcd.io/bbolt"
 )
 

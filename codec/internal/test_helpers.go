@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/zgwit/storm/codec"
+	"github.com/zgwit/storm/v3/codec"
 )
 
 type testStruct struct {

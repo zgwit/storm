@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"sort"
 	"time"
-	"github.com/zgwit/storm/index"
-	"github.com/zgwit/storm/q"
+	"github.com/zgwit/storm/v3/index"
+	"github.com/zgwit/storm/v3/q"
 	bolt "go.etcd.io/bbolt"
 )
 

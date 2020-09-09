@@ -1,7 +1,7 @@
 package storm
 
 import (
-	"github.com/zgwit/storm/codec"
+	"github.com/zgwit/storm/v3/codec"
 	bolt "go.etcd.io/bbolt"
 )
 
