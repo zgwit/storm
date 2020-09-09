@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/asdine/storm/v3/codec/json"
+	"github.com/zgwit/storm/codec/json"
 	bolt "go.etcd.io/bbolt"
 	"github.com/stretchr/testify/require"
 )

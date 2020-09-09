@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/asdine/storm/v3"
-	"github.com/asdine/storm/v3/codec/gob"
+	"github.com/zgwit/storm"
+	"github.com/zgwit/storm/codec/gob"
 	bolt "go.etcd.io/bbolt"
 )
 
