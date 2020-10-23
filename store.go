@@ -3,6 +3,7 @@ package storm
 import (
 	"bytes"
 	"reflect"
+	"time"
 
 	"github.com/zgwit/storm/v3/index"
 	"github.com/zgwit/storm/v3/q"
@@ -177,6 +178,13 @@ func (n *node) save(tx *bolt.Tx, cfg *structConfig, data interface{}, update boo
 		}
 	}
 
+	//Add by jason@zgwit.com, set created
+	for _, f := range cfg.Fields {
+		if f.Created {
+			reflect.ValueOf(data).FieldByName(f.Name).Set(reflect.ValueOf(time.Now()))
+		}
+	}
+
 	id, err := toBytes(cfg.ID.Value.Interface(), n.codec)
 	if err != nil {
 		return err
@@ -321,6 +329,13 @@ func (n *node) update(data interface{}, fn func(*reflect.Value, *reflect.Value, 
 	}
 
 	current := reflect.New(reflect.Indirect(ref).Type())
+
+	//Add by jason@zgwit.com, set updated
+	for _, f := range cfg.Fields {
+		if f.Updated {
+			current.FieldByName(f.Name).Set(reflect.ValueOf(time.Now()))
+		}
+	}
 
 	return n.readWriteTx(func(tx *bolt.Tx) error {
 		err = n.WithTransaction(tx).One(cfg.ID.Name, cfg.ID.Value.Interface(), current.Interface())

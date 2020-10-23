@@ -30,6 +30,8 @@ type fieldConfig struct {
 	IsInteger      bool
 	Value          *reflect.Value
 	ForceUpdate    bool
+	Created        bool
+	Updated        bool
 }
 
 // structConfig is a structure gathering all the relevant informations about a model
@@ -132,6 +134,10 @@ func extractField(value *reflect.Value, field *reflect.StructField, m *structCon
 				}
 				// we don't need to save this field
 				return nil
+			case "created":
+				f.Created = true
+			case "updated":
+				f.Updated = true
 			default:
 				if strings.HasPrefix(tag, tagIncrement) {
 					f.Increment = true
