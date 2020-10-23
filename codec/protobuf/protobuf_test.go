@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/asdine/storm/v3"
-	"github.com/asdine/storm/v3/codec/internal"
+	"github.com/zgwit/storm/v3"
+	"github.com/zgwit/storm/v3/codec/internal"
 	"github.com/stretchr/testify/require"
 )
 
