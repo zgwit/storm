@@ -172,6 +172,12 @@ func extractField(value *reflect.Value, field *reflect.StructField, m *structCon
 				Value:          value,
 				IncrementStart: 1,
 			}
+
+			//Add by jason@zgwit.com 2020-10-23
+			//if field is int, add increment
+			if f.IsInteger {
+				f.Increment = true
+			}
 			m.Fields[field.Name] = f
 		}
 		m.ID = f
